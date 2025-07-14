@@ -234,9 +234,9 @@ export default function HomePage() {
               <div className="relative">
                 <video 
                   controls 
-                  preload="metadata"
+                  preload="auto"
                   playsInline
-                  poster={isIOS ? "/antopresentazione-poster.svg" : undefined}
+                  muted
                   className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
@@ -466,9 +466,9 @@ export default function HomePage() {
               <div>
                 <video 
                   controls 
-                  preload="metadata"
+                  preload="auto"
                   playsInline
-                  poster={isIOS ? "/bmw-poster.svg" : undefined}
+                  muted
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/BMW.mp4" type="video/mp4" />
@@ -560,9 +560,9 @@ export default function HomePage() {
             <div className="flex justify-center mb-8">
               <video 
                 controls 
-                preload="metadata"
+                preload="auto"
                 playsInline
-                poster={isIOS ? "/costantino-poster.svg" : undefined}
+                muted
                 className="w-full max-w-lg rounded-lg shadow-lg"
               >
                 <source src="/COSTANTINO.MP4" type="video/mp4" />
