@@ -233,8 +233,6 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
-                  muted
-                  poster="/placeholder.svg?height=400&width=600&text=Anteprima+Video"
                   className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
@@ -466,8 +464,6 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
-                  muted
-                  poster="/placeholder.svg?height=400&width=500&text=Anteprima+Video"
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/BMW.mp4" type="video/mp4" />
@@ -561,8 +557,6 @@ export default function HomePage() {
                 controls 
                 preload="metadata"
                 playsInline
-                muted
-                poster="/placeholder.svg?height=300&width=400&text=Anteprima+Video"
                 className="w-full max-w-lg rounded-lg shadow-lg"
               >
                 <source src="/COSTANTINO.MP4" type="video/mp4" />
