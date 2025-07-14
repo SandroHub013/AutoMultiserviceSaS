@@ -32,6 +32,7 @@ import { WhatsAppBanner } from "@/components/whatsapp-banner"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { CounterAnimation } from "@/components/counter-animation"
 import { useState } from "react"
+import { useIsIOS } from "@/hooks/use-is-ios"
 
 export default function HomePage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -41,6 +42,8 @@ export default function HomePage() {
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
     window.open(googleMapsUrl, "_blank")
   }
+
+  const isIOS = useIsIOS()
 
   return (
     <div className="min-h-screen bg-white">
@@ -233,6 +236,7 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
+                  poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
                   className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
@@ -464,6 +468,7 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
+                  poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/BMW.mp4" type="video/mp4" />
@@ -557,6 +562,7 @@ export default function HomePage() {
                 controls 
                 preload="metadata"
                 playsInline
+                poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
                 className="w-full max-w-lg rounded-lg shadow-lg"
               >
                 <source src="/COSTANTINO.MP4" type="video/mp4" />
