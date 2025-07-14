@@ -239,8 +239,8 @@ export default function HomePage() {
                   muted
                   className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 >
-                  <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
-                  <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                  <source src="/ANTOPRESENTAZIONE.mp4#t=0.1" type="video/mp4" />
+                  <source src="/ANTOPRESENTAZIONE.mp4#t=0.1" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
                   <p className="text-center p-4 bg-gray-100 rounded-lg">
                     Il tuo browser non supporta il tag video. 
                     <br />
@@ -471,8 +471,8 @@ export default function HomePage() {
                   muted
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
                 >
-                  <source src="/BMW.mp4" type="video/mp4" />
-                  <source src="/BMW.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                  <source src="/BMW.mp4#t=0.1" type="video/mp4" />
+                  <source src="/BMW.mp4#t=0.1" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
                   <p className="text-center p-4 bg-gray-100 rounded-lg">
                     Il tuo browser non supporta il tag video. 
                     <br />
@@ -565,8 +565,8 @@ export default function HomePage() {
                 muted
                 className="w-full max-w-lg rounded-lg shadow-lg"
               >
-                <source src="/COSTANTINO.MP4" type="video/mp4" />
-                <source src="/COSTANTINO.MP4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                <source src="/COSTANTINO.MP4#t=0.1" type="video/mp4" />
+                <source src="/COSTANTINO.MP4#t=0.1" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
                 <p className="text-center p-4 bg-gray-100 rounded-lg">
                   Il tuo browser non supporta il tag video. 
                   <br />
