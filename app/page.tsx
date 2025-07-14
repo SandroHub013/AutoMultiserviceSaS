@@ -236,7 +236,7 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
-                  poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
+                  poster={isIOS ? "/antopresentazione-poster.svg" : undefined}
                   className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
@@ -468,7 +468,7 @@ export default function HomePage() {
                   controls 
                   preload="metadata"
                   playsInline
-                  poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
+                  poster={isIOS ? "/bmw-poster.svg" : undefined}
                   className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
                 >
                   <source src="/BMW.mp4" type="video/mp4" />
@@ -562,7 +562,7 @@ export default function HomePage() {
                 controls 
                 preload="metadata"
                 playsInline
-                poster={isIOS ? "/placeholder.svg?height=400&width=600&text=Anteprima+Video" : undefined}
+                poster={isIOS ? "/costantino-poster.svg" : undefined}
                 className="w-full max-w-lg rounded-lg shadow-lg"
               >
                 <source src="/COSTANTINO.MP4" type="video/mp4" />
