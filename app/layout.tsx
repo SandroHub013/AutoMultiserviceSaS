@@ -3,115 +3,84 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 const inter = Inter({ subsets: ["latin"] })
 
+export const metadataBase = new URL("https://automultiservicesas.com")
+
 export const metadata: Metadata = {
-  title: "AutoMultiservice | Acquistiamo Auto Incidentate Bologna, Modena, Ferrara - Valutazione Immediata",
+  metadataBase,
+  title: {
+    default: "AutoMultiservice - Acquisto Auto Incidentate, Usate e Ricambi a Bologna",
+    template: "%s | AutoMultiservice",
+  },
   description:
-    "Acquistiamo auto incidentate, sinistrate, alluvionate a Bologna, Modena, Ferrara, Parma, Reggio Emilia, Verona, Firenze, Mantova, Cesena, Ravenna, Padova, Rovigo. Valutazione gratuita, pagamento immediato, ritiro con nostri mezzi. Ricambi usati garantiti, revisione motori e cambi, rottamazione veicoli. AUTOMULTISERVICE Minerbio (BO).",
+    "Acquistiamo auto incidentate, usate, fuse in tutta Italia. Pagamento immediato, ritiro gratuito. Ricambi usati garantiti per tutte le marche. Sede a Minerbio (BO).",
   keywords: [
-    // Acquistiamo auto incidentate per città
-    "acquistiamo auto incidentata Bologna",
-    "acquistiamo auto incidentata Modena",
-    "acquistiamo auto incidentata Cesena",
-    "acquistiamo auto incidentata Parma",
-    "acquistiamo auto incidentata Reggio Emilia",
-    "acquistiamo auto incidentata Verona",
-    "acquistiamo auto incidentata Ferrara",
-    "acquistiamo auto incidentata Firenze",
-    "acquistiamo auto incidentata Mantova",
-    "acquistiamo auto incidentata Rovigo",
-    "acquistiamo auto incidentata Ravenna",
-    "acquistiamo auto incidentata Padova",
-
-    // Valutazione auto incidentate per città
-    "valutazione auto incidentata Bologna",
-    "valutazione auto incidentata Modena",
-    "valutazione auto incidentata Cesena",
-    "valutazione auto incidentata Parma",
-    "valutazione auto incidentata Firenze",
-    "valutazione auto incidentata Verona",
-    "valutazione auto incidentata Reggio Emilia",
-    "valutazione auto incidentata Ferrara",
-    "valutazione auto incidentata Mantova",
-
-    // Valutazione auto sinistrate
-    "valutazione auto sinistrata Bologna",
-    "valutazione auto sinistrata Ferrara",
-    "valutazione auto sinistrata Imola",
-    "acquistiamo auto sinistrata Bologna",
-    "acquistiamo auto sinistrata Ferrara",
-    "acquistiamo auto sinistrata Modena",
-
-    // Compro autoveicoli
-    "compro autoveicoli incidentata Bologna",
-    "compro autoveicoli incidentata Modena",
-    "compro autoveicoli incidentata Ferrara",
-    "compro auto incidentata Ferrara",
-
-    // Valutazione auto usate
-    "valutazione auto usata Bologna",
-    "valutazione auto usata Ferrara",
-
-    // Auto alluvionate
-    "auto alluvionata Firenze",
-    "auto alluvionate Bologna",
-    "auto grandinata Emilia Romagna",
-
-    // Servizi tecnici
-    "sostituzione revisione cambio",
-    "revisione sostituzione motore",
-    "rottamazione veicoli",
-    "veicoli rottamazione",
-    "demolizione auto gratuita",
-
-    // Keywords generali
-    "compro auto incidentate",
-    "acquisto veicoli usati",
+    "acquisto auto incidentate",
+    "vendo auto incidentata",
+    "valutazione auto usate",
     "ricambi auto usati",
-    "permuta veicoli",
-    "riscatto leasing",
-    "AutoMultiservice Minerbio",
-    "AutoMultiservice Bologna",
-    "pagamento immediato auto",
-    "ritiro gratuito veicoli",
-  ].join(", "),
-  authors: [{ name: "AutoMultiservice" }],
-  creator: "AutoMultiservice",
-  publisher: "AutoMultiservice",
-  robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
+    "demolizione auto gratuita",
+    "auto grandinate",
+    "veicoli alluvionati",
+    "ritiro auto non marcianti",
+    "pagamento contanti auto",
+    "ricambi garantiti",
+    "Bologna auto incidentate",
+    "Modena ricambi auto",
+    "Emilia Romagna acquisto auto",
+  ],
+  authors: [{ name: "AutoMultiservice s.a.s." }],
   openGraph: {
-    title: "AutoMultiservice | Acquistiamo Auto Incidentate Bologna, Modena, Ferrara - Valutazione Immediata",
-    description:
-      "Acquistiamo auto incidentate, sinistrate, alluvionate in Emilia Romagna, Veneto, Toscana. Valutazione gratuita a Bologna, Modena, Ferrara, Parma, Reggio Emilia, Verona, Firenze. Pagamento immediato, ritiro gratuito. Dal 2008 oltre 5000 clienti soddisfatti.",
-    url: "https://www.automultiservice.it",
+    title: "AutoMultiservice - Compro Auto Incidentate e Usate",
+    description: "Valutazione gratuita, pagamento immediato e ritiro in tutta Italia.",
+    url: "https://automultiservicesas.com",
     siteName: "AutoMultiservice",
-    locale: "it_IT",
-    type: "website",
     images: [
       {
         url: "/logo-automultiservice.jpg",
         width: 1200,
         height: 630,
-        alt: "AutoMultiservice - Acquistiamo Auto Incidentate Bologna Modena Ferrara",
+        alt: "AutoMultiservice Logo",
       },
     ],
+    locale: "it_IT",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AutoMultiservice | Acquistiamo Auto Incidentate Bologna, Modena, Ferrara",
-    description:
-      "Valutazione gratuita auto incidentate, sinistrate, alluvionate. Pagamento immediato, ritiro gratuito in Emilia Romagna, Veneto, Toscana. Dal 2008 a Minerbio (BO).",
+    title: "AutoMultiservice - Acquisto Auto Incidentate",
+    description: "Pagamenti immediati e ritiro gratuito in tutta Italia.",
     images: ["/logo-automultiservice.jpg"],
   },
-  verification: {
-    google: "google-site-verification-code",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
-  alternates: {
-    canonical: "https://www.automultiservice.it",
+  icons: {
+    icon: [
+      { url: "/logo-automultiservice.jpg", type: "image/jpg" },
+    ],
+    shortcut: "/logo-automultiservice.jpg",
+    apple: "/logo-automultiservice.jpg",
   },
-    generator: 'v0.dev'
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#1B365D",
 }
 
 export default function RootLayout({
@@ -308,6 +277,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} h-full w-full m-0 p-0`}>
         <div className="w-full min-h-screen">{children}</div>
+        <SpeedInsights />
       </body>
     </html>
   )
