@@ -268,49 +268,35 @@ export default function HomePage() {
 
       {/* Esperienza e Sicurezza */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
           <ScrollReveal direction="up" delay={0.2}>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#1B365D] mb-4">Perché Scegliere AutoMultiservice</h2>
-              <p className="text-xl text-gray-600">15 anni di esperienza, migliaia di clienti soddisfatti</p>
-            </div>
+            <h2 className="text-4xl font-bold text-[#1B365D] mb-4">Oltre 24 Anni di Esperienza al Vostro Servizio</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dal 2000, offriamo professionalità e trasparenza. La nostra lunga storia è la vostra garanzia di un servizio affidabile e competente.
+            </p>
           </ScrollReveal>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Euro,
-                title: "Pagamenti Sicuri",
-                description: "Pagamento in contanti immediato alla consegna. Nessun rischio, massima sicurezza.",
-              },
-              {
-                icon: Users,
-                title: "5000+ Clienti",
-                description:
-                  "Migliaia di clienti soddisfatti in tutta Italia. Recensioni verificate e trasparenza totale.",
-              },
-              {
-                icon: Calendar,
-                title: "Dal 2008",
-                description:
-                  "15 anni di attività nel settore automotive. Esperienza consolidata e affidabilità garantita.",
-              },
-              {
-                icon: Shield,
-                title: "Garanzia Totale",
-                description: "Garanzia 12 mesi sui ricambi. Gestione completa di tutte le pratiche burocratiche.",
-              },
-            ].map((item, index) => (
-              <ScrollReveal key={item.title} direction="up" delay={0.2 + index * 0.1}>
-                <div className="text-center group">
-                  <div className="bg-[#FF6B35] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="h-10 w-10 text-white" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+          <div className="grid md:grid-cols-3 gap-8 mt-12 text-left">
+            {/* Box 1: Anni di Esperienza */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-[#1B365D] mb-2">Esperienza Comprovata</h3>
+              <p className="text-gray-700">
+                Con oltre due decenni nel settore, abbiamo sviluppato una competenza unica nella valutazione e gestione di veicoli e ricambi.
+              </p>
+            </div>
+            {/* Box 2: Clienti Soddisfatti */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-[#1B365D] mb-2">5000+ Clienti Soddisfatti</h3>
+              <p className="text-gray-700">
+                Migliaia di clienti soddisfatti in tutta Italia. La nostra fiducia e la nostra professionalità sono testimoniate dalle recensioni.
+              </p>
+            </div>
+            {/* Box 3: Sicurezza Pagamenti */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-[#1B365D] mb-2">Pagamenti Sicuri</h3>
+              <p className="text-gray-700">
+                Pagamento in contanti immediato alla consegna. Nessun rischio, massima sicurezza. Siamo sempre a vostra disposizione.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -813,93 +799,53 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1B365D] text-white py-12">
+      <footer className="bg-[#1B365D] text-white pt-16 pb-8">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <ScrollReveal direction="up" delay={0.2}>
-              <div>
-                <Image
-                  src="/logo-automultiservice.jpg"
-                  alt="AutoMultiservice Logo"
-                  width={200}
-                  height={60}
-                  className="h-12 w-auto mb-4"
-                />
-                <p className="text-gray-300 mb-4">
-                  AUTOMULTISERVICE s.a.s. di D'Andrea Antonio & C. - Dal 2008 la tua soluzione completa per veicoli
-                  usati, incidentati e ricambi auto/moto. Oltre 5000 clienti soddisfatti in tutta Italia.
-                </p>
-                <div className="flex space-x-4">
-                  <Button
-                    size="sm"
-                    className="bg-[#25D366] hover:bg-[#20BA5A] transform hover:scale-105 transition-all duration-300"
-                    onClick={() => window.open("https://wa.me/393387487512", "_blank")}
-                  >
-                    <MessageCircle className="h-4 w-4 mr-2" />
-                    WhatsApp
-                  </Button>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {[
-              {
-                title: "Servizi Principali",
-                items: [
-                  "Acquisto Veicoli Incidentati",
-                  "Ricambi Usati Garantiti",
-                  "Permuta Veicoli",
-                  "Demolizione Gratuita",
-                  "Riscatto Leasing",
-                ],
-              },
-              {
-                title: "Contatti",
-                items: [
-                  <a
-                    key="phone"
-                    href="tel:+393387487512"
-                    className="hover:text-[#FF6B35] transition-colors cursor-pointer flex items-center"
-                  >
-                    📞 338 74 87 512
-                  </a>,
-                  "📍 Via del Lavoro, 12 - Minerbio (BO)",
-                  "🕒 Lun-Gio 8:00-12:30/14:00-17:30",
-                  "💬 WhatsApp: 24/7",
-                ],
-              },
-              {
-                title: "Perché Sceglierci",
-                items: [
-                  "✅ 15+ anni di esperienza",
-                  "✅ 5000+ clienti soddisfatti",
-                  "✅ Pagamenti garantiti",
-                  "✅ Garanzia 12 mesi",
-                  "✅ Servizio in tutta Italia",
-                ],
-              },
-            ].map((section, index) => (
-              <ScrollReveal key={section.title} direction="up" delay={0.3 + index * 0.1}>
-                <div>
-                  <h4 className="font-semibold mb-4">{section.title}</h4>
-                  <ul className="space-y-2 text-gray-300">
-                    {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal direction="up" delay={0.6}>
-            <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
-              <p>&copy; 2024 AUTOMULTISERVICE s.a.s. di D'Andrea Antonio & C. Tutti i diritti riservati.</p>
-              <p className="text-sm mt-2">
-                Acquisto veicoli incidentati, usati, ricambi auto - Minerbio (BO) e tutta Italia
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            {/* Sezione Info e Contatti */}
+            <div>
+              <h3 className="text-xl font-bold mb-4">AutoMultiservice SAS</h3>
+              <p className="text-gray-300">
+                Sede Operativa: Via del Lavoro, 14, 40061 Minerbio (BO)
+                <br />
+                Sede Legale: Viale dell'Industria 23/b, 35129 Padova (PD)
+              </p>
+              <p className="mt-4 text-gray-300">
+                P.Iva: 04704900283
               </p>
             </div>
-          </ScrollReveal>
+
+            {/* Sezione Link Utili */}
+            <div>
+              <h3 className="text-xl font-bold mb-4">Link Utili</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="#servizi" className="hover:text-white">I Nostri Servizi</a></li>
+                <li><a href="#ricambi" className="hover:text-white">Ricambi Usati</a></li>
+                <li><a href="#valutazione" className="hover:text-white">Valutazione Gratuita</a></li>
+                <li><a href="#contatti" className="hover:text-white">Contatti</a></li>
+              </ul>
+            </div>
+
+            {/* Sezione Note Legali */}
+            <div>
+              <h3 className="text-xl font-bold mb-4">Informazioni Legali</h3>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/note-legali" className="hover:text-white">Note Legali</a></li>
+                <li><a href="/condizioni-d-uso" className="hover:text-white">Condizioni d'Uso</a></li>
+                <li><a href="/privacy-clienti-fornitori" className="hover:text-white">Privacy Clienti/Fornitori</a></li>
+                <li><a href="/privacy-ue-2016-679" className="hover:text-white">Informativa Privacy UE</a></li>
+              </ul>
+            </div>
+
+            {/* Sezione Social */}
+            <div>
+              <h3 className="text-xl font-bold mb-4">Seguici</h3>
+              {/* Qui puoi aggiungere le icone social se necessario */}
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; {new Date().getFullYear()} AutoMultiservice SAS di D'Andrea Antonio & C. Tutti i diritti riservati.</p>
+          </div>
         </div>
       </footer>
     </div>
