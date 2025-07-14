@@ -230,9 +230,22 @@ export default function HomePage() {
 
             <ScrollReveal direction="right" delay={0.4}>
               <div className="relative">
-                <video controls className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <video 
+                  controls 
+                  preload="metadata"
+                  playsInline
+                  muted
+                  className="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                >
                   <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4" />
-                  Il tuo browser non supporta il tag video.
+                  <source src="/ANTOPRESENTAZIONE.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                  <p className="text-center p-4 bg-gray-100 rounded-lg">
+                    Il tuo browser non supporta il tag video. 
+                    <br />
+                    <a href="/ANTOPRESENTAZIONE.mp4" className="text-blue-600 underline">
+                      Clicca qui per scaricare il video
+                    </a>
+                  </p>
                 </video>
                 <div className="absolute -bottom-6 -left-6 bg-[#FF6B35] text-white p-6 rounded-lg shadow-lg animate-bounce">
                   <CounterAnimation end={15} duration={2000} />
@@ -449,9 +462,22 @@ export default function HomePage() {
 
             <ScrollReveal direction="right" delay={0.4}>
               <div>
-                <video controls className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
+                <video 
+                  controls 
+                  preload="metadata"
+                  playsInline
+                  muted
+                  className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500"
+                >
                   <source src="/BMW.mp4" type="video/mp4" />
-                  Il tuo browser non supporta il tag video.
+                  <source src="/BMW.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                  <p className="text-center p-4 bg-gray-100 rounded-lg">
+                    Il tuo browser non supporta il tag video. 
+                    <br />
+                    <a href="/BMW.mp4" className="text-blue-600 underline">
+                      Clicca qui per scaricare il video
+                    </a>
+                  </p>
                 </video>
               </div>
             </ScrollReveal>
@@ -530,9 +556,22 @@ export default function HomePage() {
 
           <ScrollReveal direction="up" delay={0.3}>
             <div className="flex justify-center mb-8">
-              <video controls className="w-full max-w-lg rounded-lg shadow-lg">
+              <video 
+                controls 
+                preload="metadata"
+                playsInline
+                muted
+                className="w-full max-w-lg rounded-lg shadow-lg"
+              >
                 <source src="/COSTANTINO.MP4" type="video/mp4" />
-                Il tuo browser non supporta il tag video.
+                <source src="/COSTANTINO.MP4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'" />
+                <p className="text-center p-4 bg-gray-100 rounded-lg">
+                  Il tuo browser non supporta il tag video. 
+                  <br />
+                  <a href="/COSTANTINO.MP4" className="text-blue-600 underline">
+                    Clicca qui per scaricare il video
+                  </a>
+                </p>
               </video>
             </div>
           </ScrollReveal>
