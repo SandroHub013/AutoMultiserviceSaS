@@ -95,8 +95,7 @@ export default function HomePage() {
                 className="bg-[#25D366] hover:bg-[#20BA5A] text-white"
                 onClick={() => window.open("https://wa.me/393387487512", "_blank")}
               >
-                <MessageCircle className="h-4 w-4 mr-2" />
-                WhatsApp
+                <MessageCircle className="h-4 w-4" />
               </Button>
 
               {/* Mobile Menu Button */}
