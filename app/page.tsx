@@ -23,6 +23,7 @@ import {
   Navigation,
   Menu,
   X,
+  Instagram,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -840,7 +841,12 @@ export default function HomePage() {
             {/* Sezione Social */}
             <div>
               <h3 className="text-xl font-bold mb-4">Seguici</h3>
-              {/* Qui puoi aggiungere le icone social se necessario */}
+              <div className="flex space-x-4">
+                <a href="https://www.instagram.com/automultiservice_sas/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                  <Instagram className="h-6 w-6" />
+                </a>
+                {/* Aggiungi qui altre icone social se necessario */}
+              </div>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
