@@ -24,6 +24,7 @@ import {
   Menu,
   X,
   Instagram,
+  Check,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -176,7 +177,7 @@ export default function HomePage() {
                 <div className="flex items-center space-x-2 mb-4">
                   <Badge className="bg-[#FF6B35] text-white px-3 py-1 animate-pulse">
                     <Award className="h-4 w-4 mr-1" />
-                    Dal 2008 nel settore
+                    Dal 2000 nel settore
                   </Badge>
                   <Badge className="bg-[#28A745] text-white px-3 py-1 animate-pulse">
                     <Shield className="h-4 w-4 mr-1" />
