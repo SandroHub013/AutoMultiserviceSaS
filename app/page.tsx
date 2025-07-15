@@ -250,7 +250,7 @@ export default function HomePage() {
                   </p>
                 </video>
                 <div className="absolute -bottom-6 -left-6 bg-[#FF6B35] text-white p-6 rounded-lg shadow-lg animate-bounce">
-                  <CounterAnimation end={15} duration={2000} />
+                  <CounterAnimation end={24} duration={2000} />
                   <div className="text-sm">Anni di esperienza</div>
                 </div>
                 <div

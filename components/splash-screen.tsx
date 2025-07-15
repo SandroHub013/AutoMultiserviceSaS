@@ -1,30 +1,34 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { Volume2, VolumeX } from "lucide-react"
 
 export function SplashScreen() {
   const [isVisible, setIsVisible] = useState(true)
+  const [isMuted, setIsMuted] = useState(true)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-    }, 6000)
+    }, 4000) // Durata riportata a 4 secondi
 
-    // Gestione autoplay con audio
+    // L'autoplay funziona in modo affidabile solo se mutato
     if (videoRef.current) {
       videoRef.current.play().catch(error => {
-        // Se l'autoplay con audio fallisce, muta il video e riprova
-        console.warn("Autoplay with sound failed, falling back to muted autoplay.", error)
-        if (videoRef.current) {
-          videoRef.current.muted = true
-          videoRef.current.play()
-        }
+        console.warn("Autoplay failed, user interaction might be required.", error)
       })
     }
 
     return () => clearTimeout(timer)
   }, [])
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsMuted(videoRef.current.muted)
+    }
+  }
 
   if (!isVisible) return null
 
@@ -34,8 +38,17 @@ export function SplashScreen() {
         ref={videoRef}
         src="/mazda.mp4"
         playsInline
+        autoPlay
+        muted
         className="w-full h-full object-cover"
       />
+      <button 
+        onClick={toggleMute} 
+        className="absolute bottom-8 right-8 z-50 p-2 bg-white/20 rounded-full text-white hover:bg-white/30 transition-colors"
+        aria-label="Toggle audio"
+      >
+        {isMuted ? <VolumeX size={24} /> : <Volume2 size={24} />}
+      </button>
     </div>
   )
 } 
