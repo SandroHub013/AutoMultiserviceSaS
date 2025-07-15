@@ -30,6 +30,7 @@ import Image from "next/image"
 import { ContactForm } from "@/components/contact-form"
 import { VehicleEvaluationForm } from "@/components/vehicle-evaluation-form"
 import { WhatsAppBanner } from "@/components/whatsapp-banner"
+import { SplashScreen } from "@/components/splash-screen"
 import { ScrollReveal } from "@/components/scroll-reveal"
 import { CounterAnimation } from "@/components/counter-animation"
 import { useState } from "react"
@@ -47,10 +48,8 @@ export default function HomePage() {
   const isIOS = useIsIOS()
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* WhatsApp Banner Fisso */}
-      <WhatsAppBanner />
-
+    <main className="relative">
+      <SplashScreen />
       {/* Header */}
       <header className="bg-[#1B365D] text-white sticky top-0 z-40">
         <div className="container mx-auto px-4 py-4">
@@ -854,6 +853,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    </div>
+    </main>
   )
 }
