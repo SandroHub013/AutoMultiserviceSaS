@@ -8,7 +8,7 @@ export function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false)
-    }, 4000) // Il video dura 4 secondi
+    }, 6000) // Il video dura 6 secondi
 
     return () => clearTimeout(timer)
   }, [])
@@ -20,7 +20,6 @@ export function SplashScreen() {
       <video
         src="/mazda.mp4"
         autoPlay
-        muted
         playsInline
         className="w-full h-full object-cover"
       />
